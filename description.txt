@@ -1,0 +1,26 @@
+socket-bidirectional communication between cliet and server
+allows multiple rooms and allows multiple clients to join the room
+
+express - web framework
+moment - moment.js- formats date and time
+socket.io - framework for dealing with web sockets
+
+nodemon- to constanmtly monitor changes
+
+difference between socket.broadcast.emit and socket.emit is in the first the user who connects will not recieve that message while socket.emit sends the message to single user connectd actively.io.emit()-- all the clients in general.
+
+Socket.IO is a JavaScript library for real-time web applications. It enables real-time, bi-directional communication between web clients and servers.
+We will be using express to build the web server that Socket.IO will work with. Any other node-server-side framework or even node HTTP server can be used. However, ExpressJS makes it easy to define routes and other things.
+
+
+io is a Socket.IO server instance attached to an instance of http.Server listening for incoming events.
+The socket argument of the connection event listener callback function is an object that represents an incoming socket connection from a client.
+Both of them can listen for events with the on method.
+
+
+This was to send an event to everyone. Now, if we want to send an event to everyone, but the client that caused it (in the previous example, it was caused by new clients on connecting), we can use the socket.broadcast.emit.To broadcast an event to all the clients, we can use the io.sockets.emit method.
+
+The io.on event handler handles connection, disconnection, etc., events in it, using the socket object.
+
+The Server instance (often called io)
+A Socket is the fundamental class for interacting with the client. It inherits all the methods of the Node.js EventEmitter, like emit, on, once or removeListener.
